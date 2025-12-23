@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { theme } from "./theme";
 import { breackpoints } from "./brakpionts";
 
 export const GlobalStyle = createGlobalStyle`
@@ -9,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
 }
 body {
-    background-color: ${theme.colors.dark.darkBlue};
-    color: ${theme.colors.dark.white};
+    background-color: ${({theme})=>theme.colors.darkBlue};
+    color: ${({theme})=>theme.colors.white};
     font-family: "Outfit Variable","Arial",sans-serif;
     font-weight: 400;
     font-size: .9375rem;
