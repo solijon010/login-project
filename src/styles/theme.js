@@ -1,39 +1,30 @@
 export const dark = {
   colors: {
-    // BACKGROUND
-    darkBlue: "#10141E", // body
-    semiDarkblue: "#161D2F", // card
-
-    // TEXT
-    white: "#FFFFFF",
-    white50: "rgba(255,255,255,0.5)",
-
-    // UI
-    greyishBlue: "#5A698F",
+    darkBlue: "#10141E",
+    white: "#fff",
     red: "#FC4747",
-
-    // CARD EFFECT
-    cardBorder: "transparent",
-    cardShadow: "rgba(0,0,0,0.35)",
+    greyishBlue: "#5A698F",
+    semiDarkblue: "#161D2F",
+    white50: "rgba(255,255,255,0.5)",
   },
 };
 
 export const light = {
   colors: {
-    // BACKGROUND
-    darkBlue: "#10141E", // body (och kulrang)
-    semiDarkblue: "#FFFFFF", // card (oq)
+    // ASOSIY FONLAR
+    darkBlue: "#FAFAFB", // body background (juda och kulrang)
+    semiDarkblue: "#f4f4f4f4", // card / modal / form background
 
-    // TEXT
-    white: "#111827",
-    white50: "rgba(17,24,39,0.55)",
+    // TEXTLAR
+    white: "#111827", // asosiy text (darkdagi white o‘rniga)
+    white50: "rgba(17,24,39,0.55)", // secondary text / placeholder
+    darkText: "#111827",
 
-    // UI
-    greyishBlue: "#6B7280",
-    red: "#DC2626",
+    // UI ELEMENTLAR
+    greyishBlue: "#6B7280", // input border / icon / label
+    red: "#DC2626", // error / primary action
 
-    // CARD EFFECT
-    cardBorder: "#E5E7EB",
-    cardShadow: "rgba(0,0,0,0.08)",
+    // QO‘SHIMCHA (xohlasang)
+    borderLight: "#E5E7EB", // divider / subtle border
   },
 };
