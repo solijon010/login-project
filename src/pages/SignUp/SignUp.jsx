@@ -1,31 +1,74 @@
 import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/Button/Button";
 import { Card } from "../../components/ui/Card/Card.style";
-import { Input } from "../../components/ui/Input/Input.style";
+import Input from "../../components/ui/Input/Input";
 import { TitleL } from "../../styles/style";
 import { dark } from "../../styles/theme";
-import { useRef } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function SignUp() {
-  const emailInputRef = useRef(null);
+  const { t } = useTranslation();
+  const [errors, setErrors] = useState({
+    email: false,
+    password: false,
+    repeatPassword: false,
+  });
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // ✅ prevenetDefault → preventDefault
-    console.log("Email value:", emailInputRef.current.value);
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    if (!formData.get("email").trim()) {
+      setErrors({
+        email: true,
+        password: false,
+        repeatPassword: false,
+      });
+    } else if (!formData.get("password").trim()) {
+      setErrors({
+        email: false,
+        password: true,
+        repeatPassword: false,
+      });
+    } else if (!formData.get("repeat-password").trim()) {
+      setErrors({
+        email: false,
+        password: false,
+        repeatPassword: true,
+      });
+    } else {
+      e.target.reset();
+    }
   };
 
   return (
     <div className="sign-up">
       <Card>
-        <TitleL>Sign Up</TitleL>
+        <TitleL>{t("Sign Up")}</TitleL>
         <form
-          onSubmit={handleSubmit} // ✅ typo tuzatildi
+          onSubmit={handleSubmit}
           style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}
         >
-          <Input ref={emailInputRef} type="email" placeholder="Email address" />
-          <Input type="password" placeholder="Password" />
-          <Input type="password" placeholder="Repeat password" />
-          <Button type="submit">Create an account</Button> {/* type submit qo‘shildi */}
+          <Input
+            error={errors.email}
+            type="email"
+            placeholder={"Email address"}
+            name="email"
+          />
+          <Input
+            error={errors.password}
+            type="password"
+            placeholder="Password"
+            name="password"
+          />
+          <Input
+            error={errors.repeatPassword}
+            type="password"
+            placeholder="Repeat password"
+            name="repeat-password"
+          />
+          <Button>{t("Create an account")}</Button>
 
           <p
             style={{
@@ -36,9 +79,9 @@ function SignUp() {
               cursor: "pointer",
             }}
           >
-            Already have an account?
+            {t("Already have an account?")}
             <Link to={"/login"} style={{ color: dark.colors.red }}>
-              Login
+              {t("Login")}
             </Link>
           </p>
         </form>

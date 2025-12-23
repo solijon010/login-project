@@ -4,17 +4,26 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React and react-i18next",
-    },
-  },
-  fr: {
-    translation: {
-      "Welcome to React": "Bienvenue à React et react-i18next",
+      "Sign Up": "Sign Up",
+      "Can't be empty": "Can't be empty",
+      "Create an account":"Create an account",
+      "Already have an account?":"Already have an account?",
+      "Email address":"Email address",
+      "Password":"Password",
+      "Repeat password":"Repeat password",
+      "Login":"Login",
     },
   },
   uz: {
     translation: {
-      "Welcome to React": "React ko'p tillar saytiga Hush kelibsiz",
+      "Sign Up": "Ro'yxatdan o'tish",
+      "Can't be empty": "Bo'sh bo'lishi mumkin emas",
+      "Create an account":"Hisob yaratish",
+      "Already have an account?":"Akkountingiz bormi?",
+      "Email address":"Elektron pochta manzilingiz",
+      "Password":"Parol",
+      "Repeat password":"Parolni qayta kiriting",
+       "Login":"Tizimga kirish"
     },
   },
 };
@@ -23,7 +32,7 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en",
+    lng: "uz",
 
     interpolation: {
       escapeValue: false, // react already safes from xss
