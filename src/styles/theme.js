@@ -12,12 +12,12 @@ export const dark = {
 export const light = {
   colors: {
     // ASOSIY FONLAR
-    darkBlue: "#FAFAFB", // body background (juda och kulrang)
-    semiDarkblue: "#f4f4f4f4", // card / modal / form background
+    darkBlue: "#E4E7EC", // body background (juda och kulrang)
+    semiDarkblue: "#FFFFFF", // card / modal / form background
 
     // TEXTLAR
-    white: "#111827", // asosiy text (darkdagi white o‘rniga)
-    white50: "rgba(17,24,39,0.55)", // secondary text / placeholder
+    white: "#101828", // asosiy text (darkdagi white o‘rniga)
+    white50: "rgba(16,24,40,0.5)", // secondary text / placeholder
     darkText: "#111827",
 
     // UI ELEMENTLAR
