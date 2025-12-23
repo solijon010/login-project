@@ -3,16 +3,22 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import ProtectedRoute from "./ProtectedRoute";
 
 function Route() {
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: <MainLayout />,
+      element: <ProtectedRoute/>,
       children: [
         {
-          index: true,
-          element: <Home />,
+          path: "/",
+          element: <MainLayout />,
+          children: [
+            {
+              index: true,
+              element: <Home />,
+            },
+          ],
         },
       ],
     },
