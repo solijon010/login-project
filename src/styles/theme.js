@@ -10,6 +10,7 @@ export const theme = {
       red: "#FC4747",
       greyishBlue: "#5A698F",
       semiDarkblue: "#161D2F",
+      white50:"rgba(255,255,255,0.5)"
     },
   },
 };
