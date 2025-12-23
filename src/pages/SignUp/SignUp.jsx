@@ -68,7 +68,7 @@ function SignUp() {
             placeholder="Repeat password"
             name="repeat-password"
           />
-          <Button>{t("Create an account")}</Button>
+          <Button style={{color:dark.colors.white}}>{t("Create an account")}</Button>
 
           <p
             style={{

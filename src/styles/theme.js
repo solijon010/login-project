@@ -1,8 +1,8 @@
 export const dark = {
   colors: {
     // BACKGROUND
-    darkBlue: "#10141E",      // body
-    semiDarkblue: "#161D2F",  // card
+    darkBlue: "#10141E", // body
+    semiDarkblue: "#161D2F", // card
 
     // TEXT
     white: "#FFFFFF",
@@ -21,7 +21,7 @@ export const dark = {
 export const light = {
   colors: {
     // BACKGROUND
-    darkBlue: "#10141E",      // body (och kulrang)
+    darkBlue: "#10141E", // body (och kulrang)
     semiDarkblue: "#FFFFFF", // card (oq)
 
     // TEXT
