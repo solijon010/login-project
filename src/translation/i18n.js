@@ -12,6 +12,7 @@ const resources = {
       "Password":"Password",
       "Repeat password":"Repeat password",
       "Login":"Login",
+      "Don't have an account?":"Don't have an account?",
     },
   },
   uz: {
@@ -23,7 +24,8 @@ const resources = {
       "Email address":"Elektron pochta manzilingiz",
       "Password":"Parol",
       "Repeat password":"Parolni qayta kiriting",
-       "Login":"Tizimga kirish"
+       "Login":"Tizimga kirish",
+       "Don't have an account?":"Hisobingiz yo'qmi?"
     },
   },
 };
