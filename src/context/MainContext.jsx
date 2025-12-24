@@ -1,9 +1,9 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
 
 export const mainContext = createContext();
 
 const initialState = {
-  theme: "dark",
+  theme: localStorage.getItem("theme") || "dark",
   user: null,
 };
 
@@ -21,6 +21,11 @@ const reducer = (state, action) => {
 
 export default function MainContext({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  
+  useEffect(() => {
+    localStorage.setItem("theme", state.theme);
+  }, [state.theme]);
 
   return (
     <mainContext.Provider value={{ state, dispatch }}>

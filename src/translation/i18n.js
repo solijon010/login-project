@@ -21,7 +21,7 @@ const resources = {
       "Can't be empty": "Bo'sh bo'lishi mumkin emas",
       "Create an account": "Hisob yaratish",
       "Already have an account?": "Akkountingiz bormi?",
-      "Email address": "Elektron pochta ",
+      "Email address": "Elektron pochta",
       Password: "Parol",
       "Repeat password": "Parolni qayta kiriting",
       Login: "Tizimga kirish",
@@ -30,15 +30,13 @@ const resources = {
   },
 };
 
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    resources,
-    lng: "uz",
-
-    interpolation: {
-      escapeValue: false, // react already safes from xss
-    },
-  });
+i18n.use(initReactI18next).init({
+  resources,
+  lng: localStorage.getItem("lang") || "uz",
+  fallbackLng: "uz",
+  interpolation: {
+    escapeValue: false,
+  },
+});
 
 export default i18n;
